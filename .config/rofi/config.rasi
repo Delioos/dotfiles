@@ -1,0 +1,323 @@
+/* rofi theme */
+
+configuration {
+    modi: "window,drun,ssh";
+    font: "jettbrains-mono 10";
+    drun-display-format: "{name} {icon}";
+    show-icons: true;
+}
+
+* {
+  bg:     #151515;
+  bg-alt: #191919;
+  black:  #2e2e2e;
+  gray:   #888888;
+  fg:     #e8e8d3;
+  
+  white:  #e8e8d3;
+  red:    #cf6a4c;
+  orange: #ffb964;
+  yellow: #d8ad4c;
+  green:  #99ad6a;
+  blue:   #597bc5;
+  blue2:  #8197bf;
+  cyan:   #71b9f8;
+  purple: #c6b6ee;
+    
+  transp: #00000000;
+
+  padding: 0;
+  margin: 0;
+}
+
+
+configuration {
+    show-icons: true;
+    drun-display-format: " {name}";
+    display-drun: "Apps";
+    modi: "drun";
+}
+
+
+
+window {
+    background-color: @bg-alt;
+    text-color: @gray;
+
+    border: 0px;
+    border-radius: 0px;
+    border-color: @black;
+
+    width: 450;
+    x-offset: 700;
+    y-offset: 200;
+
+    anchor: northwest;
+    location: northwest;
+    children: [ inputbar, mainbox ];
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @transp;
+}
+
+prompt {
+    enabled: false;
+    padding: 25px;
+    margin: 0px;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    background-color: @transp;
+    text-color: @black;
+}
+
+entry {
+    background-color: @transp;
+    text-color: @gray;
+    placeholder-color: @gray;
+    expand: true;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    padding: 25px;
+    blink: true;
+    font: "CartographCF Nerd Font Light 14";
+    placeholder: " Search for Applications ";
+}
+
+mainbox {
+    border: 2px 0px 0px 0px;
+    border-color: @black;
+    background-color: @bg;
+    children: [ listview];
+    padding: 20px;
+}
+
+listview {
+    background-color: @bg;
+    padding: 0px;
+    columns: 1;
+    lines: 12;
+    spacing: 0px;
+    cycle: false;
+    dynamic: true;
+    layout: vertical;
+    
+}
+
+
+element normal{
+    background-color: @black;
+    text-color: @purple;
+    orientation: horizontal;
+    padding: 9px;
+}
+
+element  {
+    background-color: @black;
+    text-color: @purple;
+    orientation: horizontal;
+    padding: 9px;
+}
+
+element-icon {
+    background-color: #00000000;
+    text-color: inherit;
+    vertical-align: 0.5;
+    size: 32px;
+    border: 0px;
+}
+
+element-text {
+    enabled: true;
+    background-color: @transp;
+    text-color: inherit;
+    expand: true;
+    vertical-align: 0.5;
+    font: "CartographCF Nerd Font 13";
+}
+
+element selected {
+    background-color: @bg-alt;
+    text-color: @fg;
+    border: 2px;
+    border-radius: 4px;   
+    border-color: @black;
+}
+
+/**
+ * rofi -dump-theme output.
+ **/
+* {
+    red:                         rgba ( 220, 50, 47, 100 % );
+    selected-active-foreground:  var(background);
+    lightfg:                     rgba ( 88, 104, 117, 100 % );
+    separatorcolor:              var(foreground);
+    urgent-foreground:           var(red);
+    alternate-urgent-background: var(lightbg);
+    lightbg:                     rgba ( 238, 232, 213, 100 % );
+    spacing:                     2;
+    border-color:                var(foreground);
+    normal-background:           var(background);
+    background-color:            rgba ( 0, 0, 0, 0 % );
+    alternate-active-background: var(lightbg);
+    active-foreground:           var(blue);
+    blue:                        rgba ( 38, 139, 210, 100 % );
+    urgent-background:           var(background);
+    alternate-normal-foreground: var(foreground);
+    selected-active-background:  var(blue);
+    background:                  rgba ( 253, 246, 227, 100 % );
+    selected-normal-foreground:  var(lightbg);
+    active-background:           var(background);
+    alternate-active-foreground: var(blue);
+    alternate-normal-background: var(lightbg);
+    foreground:                  rgba ( 0, 43, 54, 100 % );
+    selected-urgent-background:  var(red);
+    selected-urgent-foreground:  var(background);
+    normal-foreground:           var(foreground);
+    alternate-urgent-foreground: var(red);
+    selected-normal-background:  var(lightfg);
+}
+element {
+    padding: 1px ;
+    spacing: 5px ;
+    border:  0;
+    cursor:  pointer;
+}
+element normal.normal {
+    background-color: var(normal-background);
+    text-color:       var(normal-foreground);
+}
+element normal.urgent {
+    background-color: @purple;
+    text-color:       var(urgent-foreground);
+}
+element normal.active {
+    background-color: var(active-background);
+    text-color:       var(active-foreground);
+}
+element selected.normal {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+}
+element selected.urgent {
+    background-color: var(selected-urgent-background);
+    text-color:       var(selected-urgent-foreground);
+}
+element selected.active {
+    background-color: var(selected-active-background);
+    text-color:       var(selected-active-foreground);
+}
+element alternate.normal {
+    background-color: var(alternate-normal-background);
+    text-color:       var(alternate-normal-foreground);
+}
+element alternate.urgent {
+    background-color: var(alternate-urgent-background);
+    text-color:       var(alternate-urgent-foreground);
+}
+element alternate.active {
+    background-color: var(alternate-active-background);
+    text-color:       var(alternate-active-foreground);
+}
+element-text {
+    background-color: rgba ( 0, 0, 0, 0 % );
+    text-color:       inherit;
+    highlight:        inherit;
+    cursor:           inherit;
+}
+element-icon {
+    background-color: rgba ( 0, 0, 0, 0 % );
+    size:             1.0000em ;
+    text-color:       inherit;
+    cursor:           inherit;
+}
+window {
+    padding:          5;
+    background-color: var(background);
+    border:           1;
+}
+mainbox {
+    padding: 0;
+    border:  0;
+}
+message {
+    padding:      1px ;
+    border-color: var(separatorcolor);
+    border:       2px dash 0px 0px ;
+}
+textbox {
+    text-color: var(foreground);
+}
+listview {
+    padding:      2px 0px 0px ;
+    scrollbar:    true;
+    border-color: var(separatorcolor);
+    spacing:      2px ;
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+}
+scrollbar {
+    width:        4px ;
+    padding:      0;
+    handle-width: 8px ;
+    border:       0;
+    handle-color: var(normal-foreground);
+}
+sidebar {
+    border-color: var(separatorcolor);
+    border:       2px dash 0px 0px ;
+}
+button {
+    spacing:    0;
+    text-color: var(normal-foreground);
+    cursor:     pointer;
+}
+button selected {
+    background-color: var(selected-normal-background);
+    text-color:       var(selected-normal-foreground);
+}
+
+num-filtered-rows, num-rows {
+    text-color: grey;
+    expand:     false;
+}
+textbox-num-sep {
+    text-color: grey;
+    expand:     false;
+    str:        "/";
+}
+inputbar {
+    padding:    1px ;
+    spacing:    0px ;
+    text-color: var(normal-foreground);
+    children:   [ prompt,textbox-prompt-colon,entry, num-filtered-rows, textbox-num-sep, num-rows, case-indicator ];
+}
+case-indicator {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+entry {
+    spacing:           0;
+    text-color:        var(normal-foreground);
+    placeholder-color: grey;
+    placeholder:       "Type to filter";
+    cursor:            text;
+}
+prompt {
+    spacing:    0;
+    text-color: var(normal-foreground);
+}
+textbox-prompt-colon {
+    margin:     0px 0.3000em 0.0000em 0.0000em ;
+    expand:     false;
+    str:        ":";
+    text-color: inherit;
+}
+//@theme "/usr/share/rofi/themes/c64.rasi"
+//@theme "/usr/share/rofi/themes/arthur.rasi"
+//@theme "/usr/share/rofi/themes/sidebar.rasi"
+//@theme "/usr/share/rofi/themes/c64.rasi"
+//@theme "/usr/share/rofi/themes/Paper.rasi"
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+@theme "/usr/share/rofi/themes/android_notification.rasi"
