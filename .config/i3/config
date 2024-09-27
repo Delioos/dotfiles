@@ -43,6 +43,9 @@ exec --no-startup-id nm-applet
 
 # wallpaper
 exec --no-startup-id nitrogen --restore; sleep 1; 
+
+# bar
+exec --no-startup-id polybar;  
 # a rajouter à la fin de la ligne precedente pour transpa picom -b
 
 # en full lumiere
@@ -239,11 +242,12 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+#bar {
+#        status_command i3status
+#}
 
 
 # hide/unhide i3status bar
@@ -261,22 +265,25 @@ bindsym $mod+b bar mode toggle
 
 
 assign [class="visual-studio-code"] 1
-assign [class="Code"] 1
+assign [class="Code"] 10
 assign [class="figma-linux"] 1
+assign [class="firefox"] 2
 assign [class="Firefox"] 2
 assign [class="Chrome"] 2
 assign [class="chrome"] 2
 assign [class="Notion"] 3
+assign [class="kitty"] 10
+assign [class="Kitty"] 10
 assign [class="Alacritty"] 10
 assign [class="Discord"] 5
 assign [class="Vesktop"] 5
 
 
-for_window [class="Firefox"] floating enable, resize set 1000 800, move position center
-for_window [class="Notion"] floating enable, resize set 1500 1000, move position center
+for_window [class="firefox"] no_focus,floating enable, resize set 1000 800, move position center
+for_window [class="Notion"]no_focus, floating enable, resize set 1500 1000, move position center
 for_window [class="Discord"] floating enable, resize set 800 600, move position center
 
 
 for_window [class="Alacritty"]focus, floating enable
-
+ 
 

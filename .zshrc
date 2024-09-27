@@ -155,6 +155,9 @@ alias ip="curl -4 ifconfig.me \n | clipcopy"
 
 # kitty meow meow
 alias icat="kitty +kitten icat"
+
+# tmux 
+alias tmux="tmux -f ~/.config/tmux/tmux.conf"
 # Created by `pipx` on 2024-01-05 11:51:21
 export PATH="$PATH:/home/jlss/.local/bin"
 
