@@ -1,0 +1,30 @@
+# ~/.config/helix/themes/custom_github_dark.toml
+
+inherits = "github_dark_colorblind"
+
+"ui.background" = { }  # This sets the background to transparent
+
+
+# Modify the status line to blend with the background
+"ui.statusline" = { bg = "none" }
+"ui.statusline.normal" = { bg = "none" }
+"ui.statusline.insert" = { bg = "none" }
+"ui.statusline.select" = { bg = "none" }
+
+
+# Addressing the vertical bar
+"ui.window" = { bg = "none" }
+"ui.liner" = { bg = "none" }
+"ui.gutter" = { bg = "none" }
+"ui.cursor.match" = { bg = "none" }
+"ui.virtual.ruler" = { bg = "none" }
+
+# Additional UI elements that might need adjustment
+"ui.virtual.whitespace" = { fg = "gray" }
+"ui.virtual.indent-guide" = { fg = "gray" }
+
+# You can override other color settings here if needed
+# For example:
+# "ui.linenr" = { fg = "gray" }
+# "ui.linenr.selected" = { fg = "white", modifiers = ["bold"] }
+

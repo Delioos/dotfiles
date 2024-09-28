@@ -1,8 +1,10 @@
-theme = "base16_default"
+theme = "custom_github_dark"
 
 [editor]
 line-number = "relative"
 mouse = false
+rulers = [80]
+true-color = false
 
 [editor.cursor-shape]
 insert = "bar"
@@ -10,9 +12,7 @@ normal = "block"
 select = "underline"
 
 [editor.lsp]
-# Disable automatically popups of signature parameter help
 auto-signature-help = false
-# Show LSP messages in the status line
 display-messages = true
 
 [editor.statusline]
@@ -21,14 +21,19 @@ left = ["mode", "spinner", "version-control", "file-name"]
 [editor.file-picker]
 hidden = false
 
+[keys.normal]
+A-h = "jump_view_left"
+A-j = "jump_view_down"
+A-k = "jump_view_up"
+A-l = "jump_view_right"
+
 [keys.insert]
-j = { k = "normal_mode" } # Maps `jk` to exit insert mode
+j = { k = "normal_mode" }
 
 [keys.insert."+"]
 c = ":run-shell-command cargo build"
 t = ":run-shell-command cargo test"
 
-# invert `j` and `k` in view mode
 [keys.normal.z]
 j = "scroll_up"
 k = "scroll_down"
